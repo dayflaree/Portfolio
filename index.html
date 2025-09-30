@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elijah's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <div class="video-placeholder">
+            <div class="video-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Music Tracker -->
+    <div class="music-tracker">
+        <div class="track-info">
+            <span class="track-title" id="currentTrack">Cat Watcher...</span>
+            <span class="track-source">The Rat Cave: Reimagined Soundtrack</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Title -->
+        <h1 class="main-title">
+            <span class="title-line" id="nameDisplay">Elijah Staley</span>
+        </h1>
+
+        <!-- Navigation Buttons -->
+        <nav class="navigation">
+            <button class="nav-btn active" data-section="about">
+                <span class="btn-icon">👤</span>
+                <span class="btn-text">About</span>
+            </button>
+            <button class="nav-btn" data-section="writing">
+                <span class="btn-icon">✍️</span>
+                <span class="btn-text">Creative Writing</span>
+            </button>
+            <button class="nav-btn" data-section="game-dev">
+                <span class="btn-icon">🎮</span>
+                <span class="btn-text">Game Development</span>
+            </button>
+            <button class="nav-btn" data-section="programming">
+                <span class="btn-icon">💻</span>
+                <span class="btn-text">Programming</span>
+            </button>
+            <button class="nav-btn" data-section="qa-testing">
+                <span class="btn-icon">🔍</span>
+                <span class="btn-text">QA & Testing</span>
+            </button>
+            <button class="nav-btn" data-section="design">
+                <span class="btn-icon">🎨</span>
+                <span class="btn-text">Graphic Design</span>
+            </button>
+        </nav>
+
+        <!-- Content Sections -->
+        <main class="content">
+            <!-- About Section -->
+            <section id="about" class="content-section active">
+                <div class="section-content">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                        <div class="bio-text">
+                            <p>I'm a Quality Assurance Tester with hands-on experience testing across indie and AAA projects, including roles with Behaviour Interactive, Funcom, Lionbridge Games, and Electronic Arts (NDA sessions). My background covers functional, regression, and usability testing, with a focus on clear bug reporting, reproducibility, and actionable feedback that improves the player experience.</p>
+                            
+                            <p>Alongside QA, I have programming skills in Python, HTML, and Lua, plus indie development experience in Unreal Engine and personal projects on GitHub. This technical foundation helps me understand both the player perspective and the developer workflow when reporting issues.</p>
+                            
+                            <p>I've contributed to diverse projects ranging from open-world multiplayer builds to narrative-driven indie titles, and I thrive in collaborative testing environments where communication and detail matter. I'm currently looking for remote QA opportunities where I can bring structured testing, strong documentation, and a passion for games to a professional team.</p>
+                        </div>
+                        
+                        <div class="about-links">
+                            <a href="assets/resume.pdf" class="external-link" target="_blank">
+                                <span class="link-icon">📄</span>
+                                <span class="link-text">Download Resume</span>
+                            </a>
+                            <a href="https://www.youtube.com/@dayfloweerr" class="external-link" target="_blank">
+                                <span class="link-icon">📺</span>
+                                <span class="link-text">YouTube Channel</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Creative Writing Section -->
+            <section id="writing" class="content-section">
+                <div class="section-content">
+                    <h2>Creative Writing & Substack</h2>
+                    <div class="writing-content">
+                        <div class="substack-section">
+                            <p>Follow my creative writing journey and read my latest stories</p>
+                            <a href="https://substack.com/@johndayshower" class="external-link" target="_blank" rel="noopener noreferrer">
+                                <span class="link-icon">📝</span>
+                                <span class="link-text">Read on Substack</span>
+                            </a>
+                        </div>
+                        <div class="story-excerpt">
+                            <div class="excerpt-content">
+                                <p class="excerpt-text">A rabbit mask rested above the liquor, propped against the wall. Its paint was chipped, one ear cracked straight down the middle. The hollow eyes seemed fixed on the room, unblinking, as if they were waiting for someone to notice.</p>
+                                <p class="excerpt-meta">From: "The Rabbit"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Development Section -->
+            <section id="game-dev" class="content-section">
+                <div class="section-content">
+                    <h2>Game Development</h2>
+                    <div class="game-content">
+                        <p>Indie game development projects and creative experiments</p>
+                        <div class="platform-links">
+                            <div class="platform-buttons">
+                                <a href="https://gamejolt.com/@Dayflare" class="external-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="link-icon">🎮</span>
+                                    <span class="link-text">GameJolt</span>
+                                </a>
+                                <a href="https://dayflaree.itch.io/" class="external-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="link-icon">🎯</span>
+                                    <span class="link-text">Itch.io</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="screenshot-description">
+                            <p>Screenshots from various game development projects</p>
+                        </div>
+                        <div class="current-project">
+                            <div class="project-showcase">
+                                <div class="screenshot-gallery">
+                                    <div class="game-screenshot">
+                                        <img src="assets/gamedev/ratcave.png" alt="The Rat Cave: Reimagined Game Screenshot" />
+                                    </div>
+                                    <div class="game-screenshot">
+                                        <img src="assets/gamedev/darkcircle.png" alt="Dark Circle Game Screenshot" />
+                                    </div>
+                                    <div class="game-screenshot">
+                                        <img src="assets/gamedev/senses.png" alt="Senses Game Screenshot" />
+                                    </div>
+                                    <div class="game-screenshot">
+                                        <img src="assets/gamedev/dungeon.png" alt="Dungeon Game Screenshot" />
+                                    </div>
+                                </div>
+                                <div class="current-project-header">
+                                    <h3>CURRENT PROJECT</h3>
+                                </div>
+                                <div class="project-info">
+                                    <h4>The Rat Cave: Reimagined <img src="assets/rat.png" alt="Rat" class="rat-icon" id="ratIcon" /></h4>
+                                    <p>After the tragic events of 1979, Freddy Fazbear's Pizza was forced to shut its doors, and Fazbear Entertainment collapsed under the weight of scandal. But in 1981, founder Joseph Kane returned with a new vision — The Rat Cave. Partnering with Zack Robotics, he brought The Rat Gang to life in a brand-new restaurant built in Chicago.</p>
+                                    <p>Over a decade later, in 1993, Stacy Green takes on a simple night shift job at The Rat Cave. What should have been easy money soon turns into something much darker, as Stacy begins to uncover secrets that were never meant to be found.</p>
+                                    <p>This isn't just another night trapped in an office, staring at monitors and waiting for animatronics to lunge. This time, you're free to move — explore the halls, check the rooms, and wander the restaurant at your own risk. Armed with a flashlight and the laptop you carry from your office, you'll have to keep your wits sharp if you wish to survive until morning.</p>
+                                    <div class="gameplay-gif">
+                                        <a href="https://www.youtube.com/watch?v=KeDAjcAbbLk&t" target="_blank" rel="noopener noreferrer">
+                                            <img src="assets/gamedev/gameplay.gif" alt="The Rat Cave: Reimagined Gameplay" />
+                                        </a>
+                                    </div>
+                                    <div class="tech-details">
+                                        <h5>Technical Details</h5>
+                                        <p>This game is powered by Pygame and written entirely in Python, rather than the standard Clickteam Fusion engine commonly used for FNaF fan-games.</p>
+                                        <p><strong>System Requirements:</strong> Windows OS (excluding Windows XP), 8GB+ RAM, Display > 720p, 2GB+ free space</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Programming Section -->
+            <section id="programming" class="content-section">
+                <div class="section-content">
+                    <h2>Programming & Development</h2>
+                    <div class="programming-content">
+                        <div class="github-section">
+                            <p>Explore my code repositories and development projects</p>
+                            <a href="https://github.com/dayflaree" class="external-link" target="_blank" rel="noopener noreferrer">
+                                <span class="link-icon">💻</span>
+                                <span class="link-text">View on GitHub</span>
+                            </a>
+                        </div>
+                        <div class="website-showcase">
+                            <div class="website-gallery">
+                                <div class="website-screenshot">
+                                    <img src="assets/program/asphodel.png" alt="Asphodel Website" />
+                                </div>
+                                <div class="website-screenshot">
+                                    <img src="assets/program/deadhorizon.png" alt="Dead Horizon Website" />
+                                </div>
+                                <div class="website-screenshot">
+                                    <img src="assets/program/enigma.png" alt="Enigma Website" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QA & Testing Section -->
+            <section id="qa-testing" class="content-section">
+                <div class="section-content">
+                    <h2>Quality Assurance & Game Testing</h2>
+                    <div class="qa-content">
+                        <div class="testing-experience">
+                            <p>NDA session-based QA and game testing for AAA and indie studios</p>
+                        </div>
+                        <div class="company-logos">
+                            <div class="logo-grid">
+                                <div class="company-logo">
+                                    <a href="https://www.beernightstudio.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/beernight.jpg" alt="Beer Night Studios" />
+                                    </a>
+                                </div>
+                                <div class="company-logo">
+                                    <a href="https://www.bhvr.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/bhvr.jpg" alt="Behaviour Interactive" />
+                                    </a>
+                                </div>
+                                <div class="company-logo">
+                                    <a href="https://www.ea.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/ea.png" alt="Electronic Arts" />
+                                    </a>
+                                </div>
+                                <div class="company-logo">
+                                    <a href="https://www.funcom.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/funcom.jpg" alt="Funcom" />
+                                    </a>
+                                </div>
+                                <div class="company-logo">
+                                    <a href="https://gametester.gg/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/gametester.png" alt="Game Tester" />
+                                    </a>
+                                </div>
+                                <div class="company-logo">
+                                    <a href="https://scpftheta.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/theta.png" alt="Theta Studios" />
+                                    </a>
+                                </div>
+                                <div class="company-logo">
+                                    <a href="https://gamejolt.com/@404_Interactive" target="_blank" rel="noopener noreferrer">
+                                        <img src="assets/qa/404.png" alt="404 Studios" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Graphic Design Section -->
+            <section id="design" class="content-section">
+                <div class="section-content">
+                    <h2>Freelance Graphic Design</h2>
+                    <div class="design-content">
+                        <div class="design-showcase">
+                            <p>Graphic design work created in my free time for various projects</p>
+                            <div class="design-download">
+                                <a href="https://github.com/dayflaree/Dayflare-s-Graphical-Designs" class="external-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="link-icon">📥</span>
+                                    <span class="link-text">DOWNLOAD ON GITHUB</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="design-gallery">
+                            <div class="design-item">
+                                <img src="assets/design/apex.png" alt="Apex Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/blackreef.png" alt="Black Reef Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/catalyst.png" alt="Catalyst Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/escape.png" alt="Escape Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/mvm.png" alt="MVM Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/ordinance.png" alt="Ordinance Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/paragon_cb.png" alt="Paragon CB Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/paragon.png" alt="Paragon Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/retold_new.png" alt="Retold New Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/retold.png" alt="Retold Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/rtr.png" alt="RTR Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/shd.png" alt="SHD Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/transcend_banner.png" alt="Transcend Banner" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/transcend_logo.png" alt="Transcend Logo" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/transcend_old1.png" alt="Transcend Old 1" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/transcend_old2.png" alt="Transcend Old 2" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/vault.png" alt="Vault Design" />
+                            </div>
+                            <div class="design-item">
+                                <img src="assets/design/witty.png" alt="Witty Design" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Contact Section -->
+        <footer class="contact">
+            <div class="contact-info">
+                <p>Interested in working together? Get in touch.</p>
+                <div class="contact-links">
+                    <a href="#" id="emailLink" class="contact-link">Email</a>
+                    <a href="https://www.linkedin.com/in/elijah-staley-a29a71367/" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/dayflaree" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://substack.com/@johndayshower" class="contact-link" target="_blank" rel="noopener noreferrer">Substack</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Warning Screen -->
+    <div id="warningScreen" class="warning-screen">
+        <div class="loading-animation">
+            <div class="loading-spinner"></div>
+        </div>
+        <div class="warning-content">
+            <h2 class="warning-title">Warning</h2>
+            <p class="warning-text">This website contains minimal color saturation, ambient audio, and potential loud sounds.</p>
+            <button id="proceedBtn" class="proceed-btn">Proceed</button>
+        </div>
+    </div>
+
+    <!-- Email Display Screen -->
+    <div id="emailScreen" class="email-screen">
+        <div class="email-content">
+            <p id="emailText" class="email-text">elijah.j.staley@proton.me</p>
+            <p id="copiedText" class="copied-text">copied</p>
+        </div>
+    </div>
+
+    <!-- Image Viewer Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="" />
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
