@@ -106,13 +106,8 @@ class PortfolioApp {
 
         const updateScrollEffects = () => {
             const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
             
-            // Parallax effect for video background
-            const videoBackground = document.querySelector('.video-background');
-            if (videoBackground) {
-                videoBackground.style.transform = `translateY(${parallax}px)`;
-            }
+            // Parallax effect removed to prevent background cutoff
 
             // Logo rotation on scroll
             const logo = document.querySelector('.logo');
