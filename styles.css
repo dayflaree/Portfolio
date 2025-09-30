@@ -372,7 +372,7 @@ body {
     color: #666;
     position: absolute;
     top: -25px;
-    left: -30px;
+    left: -20px;
     font-family: serif;
 }
 
@@ -381,15 +381,17 @@ body {
     font-size: 3rem;
     color: #666;
     position: absolute;
-    bottom: -30px;
-    right: 300px;
+    bottom: -25px;
+    right: 140px;
     font-family: serif;
 }
 
 .excerpt-meta {
     color: #999;
     font-size: 0.9rem;
-    text-align: right;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
 }
 
 /* Platform Links */
