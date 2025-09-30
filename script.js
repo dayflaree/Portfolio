@@ -537,20 +537,9 @@ class PortfolioApp {
         const modalCaption = document.getElementById('modalCaption');
         const closeBtn = document.querySelector('.close');
 
-        // Get all clickable images
-        const websiteImages = document.querySelectorAll('.website-screenshot img');
+        // Get all clickable images (excluding website screenshots which are now links)
         const designImages = document.querySelectorAll('.design-item img');
         const gameImages = document.querySelectorAll('.game-screenshot img');
-
-        // Add click event listeners to website screenshots
-        websiteImages.forEach(img => {
-            img.addEventListener('click', () => {
-                modal.classList.add('show');
-                modalImg.src = img.src;
-                modalCaption.textContent = img.alt;
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
-        });
 
         // Add click event listeners to design images
         designImages.forEach(img => {
