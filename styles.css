@@ -30,9 +30,7 @@ body {
 .video-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #000 0%, #111 25%, #000 50%, #111 75%, #000 100%);
-    background-size: 20px 20px;
-    animation: backgroundShift 20s ease-in-out infinite;
+    background: #000;
     position: relative;
 }
 
@@ -46,10 +44,6 @@ body {
     backdrop-filter: blur(1px);
 }
 
-@keyframes backgroundShift {
-    0%, 100% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-}
 
 /* Container */
 .container {
@@ -81,7 +75,6 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     min-width: 100px;
@@ -92,25 +85,10 @@ body {
     gap: 0.3rem;
 }
 
-.nav-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.nav-btn:hover::before {
-    left: 100%;
-}
 
 .nav-btn:hover {
     border-color: #fff;
     background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
 }
 
 .nav-btn.active {
@@ -121,58 +99,14 @@ body {
 .btn-icon {
     font-size: 1.5rem;
     filter: grayscale(100%);
-    transition: filter 0.3s ease;
 }
 
-.nav-btn:hover .btn-icon {
-    filter: grayscale(0%);
-}
 
 .btn-text {
     font-weight: 400;
     letter-spacing: 0.5px;
 }
 
-/* Music Tracker */
-.music-tracker {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 1rem;
-    max-width: 300px;
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.music-tracker.show {
-    opacity: 1;
-}
-
-.track-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-}
-
-.track-title {
-    color: #fff;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-}
-
-.track-source {
-    color: #999;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-}
 
 /* Main Title */
 .main-title {
@@ -204,7 +138,6 @@ body {
 
 .content-section {
     display: none;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 .content-section.active {
@@ -277,10 +210,6 @@ body {
     gap: 1rem;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 .section-content h2 {
     font-size: 2.5rem;
@@ -332,7 +261,6 @@ body {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transition: all 0.3s ease;
     padding: 0.8rem 1.5rem;
     border: 1px solid #333;
     margin: 1rem 0;
@@ -417,7 +345,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -428,34 +355,16 @@ body {
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%) brightness(0.8);
-    transition: all 0.3s ease;
 }
 
 .game-screenshot:hover img {
     filter: grayscale(0%) brightness(1);
-    transform: scale(1.02);
 }
 
-.game-screenshot::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s ease;
-    pointer-events: none;
-}
-
-.game-screenshot:hover::before {
-    left: 100%;
-}
 
 .game-screenshot:hover {
     border-color: #666;
     background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
 }
 
 .placeholder-text {
@@ -479,7 +388,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -488,7 +396,6 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    transition: all 0.3s ease;
 }
 
 .website-screenshot img {
@@ -496,30 +403,13 @@ body {
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%) brightness(0.8);
-    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .website-screenshot:hover img {
     filter: grayscale(0%) brightness(1);
-    transform: scale(1.02);
 }
 
-.website-screenshot::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s ease;
-    pointer-events: none;
-}
-
-.website-screenshot:hover::before {
-    left: 100%;
-}
 
 .website-screenshot:hover {
     border-color: #666;
@@ -539,7 +429,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
     position: relative;
     padding: 1rem;
 }
@@ -560,31 +449,12 @@ body {
     height: auto;
     object-fit: contain;
     filter: grayscale(100%) brightness(0.8);
-    transition: all 0.3s ease;
 }
 
 .company-logo:hover img {
     filter: grayscale(0%) brightness(1);
-    transform: scale(1.05);
 }
 
-.company-logo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.05);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.company-logo:hover::before {
-    opacity: 1;
-}
 
 /* Design Gallery */
 .design-gallery {
@@ -601,7 +471,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     padding: 0.5rem;
@@ -614,29 +483,12 @@ body {
     height: auto;
     object-fit: contain;
     filter: grayscale(100%) brightness(0.8);
-    transition: all 0.3s ease;
 }
 
 .design-item:hover img {
     filter: grayscale(0%) brightness(1);
-    transform: scale(1.05);
 }
 
-.design-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s ease;
-    pointer-events: none;
-}
-
-.design-item:hover::before {
-    left: 100%;
-}
 
 .design-item:hover {
     border-color: #666;
@@ -666,12 +518,8 @@ body {
 
 .gameplay-gif a {
     display: inline-block;
-    transition: transform 0.3s ease;
 }
 
-.gameplay-gif a:hover {
-    transform: scale(1.02);
-}
 
 .gameplay-gif img {
     max-width: 100%;
@@ -692,18 +540,6 @@ body {
     gap: 0.5rem;
 }
 
-.rat-icon {
-    width: 24px;
-    height: 24px;
-    filter: grayscale(100%) brightness(0.8);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.rat-icon:hover {
-    filter: grayscale(0%) brightness(1);
-    transform: scale(1.2);
-}
 
 .project-info p {
     color: #ccc;
@@ -763,7 +599,6 @@ body {
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    transition: all 0.3s ease;
     position: relative;
     padding: 0.5rem 0;
 }
@@ -776,7 +611,6 @@ body {
     width: 0;
     height: 1px;
     background: #fff;
-    transition: width 0.3s ease;
 }
 
 .contact-link:hover {
@@ -892,96 +726,7 @@ body {
 }
 
 
-/* Warning Screen */
-.warning-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 10000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: opacity 2s ease;
-}
 
-.warning-screen.show {
-    display: flex;
-}
-
-.loading-animation {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid #333;
-    border-top: 3px solid #fff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.warning-screen.fade-out {
-    opacity: 0;
-}
-
-.warning-content {
-    text-align: center;
-    color: #fff;
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.warning-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    letter-spacing: 0.1em;
-}
-
-.warning-text {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.05em;
-    max-width: 600px;
-    margin-bottom: 2rem;
-}
-
-.proceed-btn {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 1rem 2rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-.proceed-btn:hover {
-    background: #fff;
-    color: #000;
-    transform: translateY(-2px);
-}
-
-.proceed-btn:active {
-    transform: translateY(0);
-}
 
 /* Email Display Screen */
 .email-screen {
@@ -996,7 +741,6 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.5s ease;
 }
 
 .email-screen.show {
@@ -1034,7 +778,6 @@ img {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
 }
 
 /* Ensure clickable image containers have proper styling */
@@ -1079,15 +822,10 @@ img {
     padding: 0;
     width: 90%;
     max-width: 1200px;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: all 0.3s ease;
-}
-
-.modal.show .modal-content {
     opacity: 1;
     transform: scale(1);
 }
+
 
 .modal-content img {
     width: 100%;
@@ -1106,7 +844,6 @@ img {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
     z-index: 1001;
     width: 40px;
     height: 40px;
@@ -1119,7 +856,6 @@ img {
 
 .close:hover {
     background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
 }
 
 .modal-caption {
@@ -1131,21 +867,7 @@ img {
     letter-spacing: 0.05em;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
-@keyframes zoomIn {
-    from { 
-        opacity: 0;
-        transform: translateY(-50%) scale(0.8);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(-50%) scale(1);
-    }
-}
 
 /* Make images clickable */
 .website-screenshot,
@@ -1154,11 +876,6 @@ img {
     cursor: pointer;
 }
 
-.website-screenshot:hover,
-.design-item:hover,
-.game-screenshot:hover {
-    transform: translateY(-2px);
-}
 
 /* Selection Styling */
 ::selection {
