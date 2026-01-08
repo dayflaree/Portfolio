@@ -86,15 +86,7 @@ body {
 }
 
 
-.nav-btn:hover {
-    border-color: #fff;
-    background: rgba(255, 255, 255, 0.05);
-}
 
-.nav-btn.active {
-    border-color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-}
 
 .btn-icon {
     font-size: 1.5rem;
@@ -253,14 +245,6 @@ body {
     object-fit: cover;
 }
 
-.freelance-item:hover img {
-    filter: grayscale(0%) brightness(1);
-}
-
-.freelance-item:hover {
-    border-color: #666;
-    background: rgba(255, 255, 255, 0.05);
-}
 
 .section-content h2 {
     font-size: 2.5rem;
@@ -288,9 +272,162 @@ body {
 .freelance-content,
 .programming-content,
 .qa-content,
-.design-content {
+.design-content,
+.development-content {
     margin-top: 3rem;
 }
+
+/* Development Section */
+.development-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-section {
+    margin: 3rem 0;
+}
+
+.projects-section h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+.status-group {
+    margin-bottom: 3rem;
+}
+
+.status-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .project-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.project-image-link {
+    display: block;
+    text-decoration: none;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.project-info {
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.project-info h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.project-year {
+    color: #999;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid;
+}
+
+.status-badge.status-complete {
+    color: #999;
+    border-color: #666;
+}
+
+.status-badge.status-working {
+    color: #999;
+    border-color: #666;
+}
+
+.status-badge.status-cancelled {
+    color: #999;
+    border-color: #666;
+}
+
+.project-note {
+    display: block;
+    color: #999;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.project-links .link-item {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 3;
+}
+
 
 .testing-experience {
     text-align: center;
@@ -318,11 +455,6 @@ body {
     margin: 1rem 0;
 }
 
-.external-link:hover {
-    color: #fff;
-    border-color: #666;
-    background: rgba(255, 255, 255, 0.05);
-}
 
 .link-icon {
     font-size: 1.2rem;
@@ -408,15 +540,6 @@ body {
     object-fit: cover;
 }
 
-.game-screenshot:hover img {
-    filter: grayscale(0%) brightness(1);
-}
-
-
-.game-screenshot:hover {
-    border-color: #666;
-    background: rgba(255, 255, 255, 0.05);
-}
 
 .placeholder-text {
     color: #666;
@@ -456,15 +579,6 @@ body {
     cursor: pointer;
 }
 
-.website-screenshot:hover img {
-    filter: grayscale(0%) brightness(1);
-}
-
-
-.website-screenshot:hover {
-    border-color: #666;
-    background: rgba(255, 255, 255, 0.05);
-}
 
 /* Company Logos */
 .logo-grid {
@@ -500,9 +614,6 @@ body {
     object-fit: contain;
 }
 
-.company-logo:hover img {
-    filter: grayscale(0%) brightness(1);
-}
 
 
 /* Design Gallery */
@@ -533,15 +644,6 @@ body {
     object-fit: contain;
 }
 
-.design-item:hover img {
-    filter: grayscale(0%) brightness(1);
-}
-
-
-.design-item:hover {
-    border-color: #666;
-    background: rgba(255, 255, 255, 0.05);
-}
 
 .design-download {
     display: flex;
@@ -661,13 +763,6 @@ body {
     background: #fff;
 }
 
-.contact-link:hover {
-    color: #fff;
-}
-
-.contact-link:hover::after {
-    width: 100%;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -884,9 +979,6 @@ img {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.close:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
 
 .modal-caption {
     text-align: center;

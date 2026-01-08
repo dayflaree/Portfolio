@@ -95,7 +95,6 @@ class PortfolioApp {
         // Get all clickable images
         const designImages = document.querySelectorAll('.design-item img');
         const gameImages = document.querySelectorAll('.game-screenshot img');
-        const freelanceImages = document.querySelectorAll('.freelance-item img');
 
         // Add click event listeners to design images
         designImages.forEach(img => {
@@ -109,16 +108,6 @@ class PortfolioApp {
 
         // Add click event listeners to game screenshots
         gameImages.forEach(img => {
-            img.addEventListener('click', () => {
-                modal.classList.add('show');
-                modalImg.src = img.src;
-                modalCaption.textContent = img.alt;
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        // Add click event listeners to freelance images
-        freelanceImages.forEach(img => {
             img.addEventListener('click', () => {
                 modal.classList.add('show');
                 modalImg.src = img.src;
